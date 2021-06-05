@@ -1,0 +1,13 @@
+D:\Git Projects\Quark Exam\bin\Debug\Quark Exam.exe.config
+D:\Git Projects\Quark Exam\bin\Debug\Quark Exam.exe
+D:\Git Projects\Quark Exam\bin\Debug\Quark Exam.pdb
+D:\Git Projects\Quark Exam\obj\Debug\Quark Exam.csproj.AssemblyReference.cache
+D:\Git Projects\Quark Exam\obj\Debug\Quark_Exam.Properties.Resources.resources
+D:\Git Projects\Quark Exam\obj\Debug\Quark Exam.csproj.GenerateResource.cache
+D:\Git Projects\Quark Exam\obj\Debug\Quark Exam.csproj.CoreCompileInputs.cache
+D:\Git Projects\Quark Exam\obj\Debug\Quark Exam.exe
+D:\Git Projects\Quark Exam\obj\Debug\Quark Exam.pdb
+D:\Git Projects\Quark Exam\obj\Debug\Quark_Exam.CreadorTiendaForm.resources
+D:\Git Projects\Quark Exam\obj\Debug\Quark_Exam.Vista.ConsultaHistorialCotizacionesForm.resources
+D:\Git Projects\Quark Exam\obj\Debug\Quark_Exam.Vista.CreadorCotizacionForm.resources
+D:\Git Projects\Quark Exam\obj\Debug\Quark_Exam.Vista.CreadorVendedorForm.resources
