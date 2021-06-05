@@ -17,7 +17,7 @@ namespace Quark_Exam.Controladores
 
         public void CrearTienda(string nombre, string direccion) {
             TiendaRopa nuevaTienda = new TiendaRopa(nombre, direccion);
-            //TODO crear stock
+            nuevaTienda.CargarStock();
 
             CreadorVendedorForm creadorVendedorForm = new CreadorVendedorForm();
             creadorTiendaForm.Hide(); //TODO Deberia cerrarse sin cerrar el programa

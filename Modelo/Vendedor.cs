@@ -22,5 +22,8 @@ namespace Quark_Exam.Modelo
             HistorialVendedor = new HistorialVendedor(this);
         }
 
+        public void AgregarCotizacion(Cotizacion nuevaCotizacion) {
+            HistorialVendedor.AgregarCotizacion(nuevaCotizacion);
+        }
     }
 }

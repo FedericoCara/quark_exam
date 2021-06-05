@@ -61,6 +61,7 @@
     <Compile Include="CreadorVendedorForm.Designer.cs">
       <DependentUpon>CreadorVendedorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\Enums\TipoCuello.cs" />
     <Compile Include="Modelo\Prendas\DetallePrenda.cs" />
     <Compile Include="Modelo\Enums\TipoManga.cs" />
     <Compile Include="CreadorTiendaForm.cs">
@@ -80,6 +81,9 @@
     <Compile Include="Modelo\Vendedor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreadorCotizacionForm.resx">
+      <DependentUpon>CreadorCotizacionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreadorTiendaForm.resx">
       <DependentUpon>CreadorTiendaForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -10,8 +10,12 @@ namespace Quark_Exam.Modelo
     {
         public TipoPantalon TipoPantalon { get; set; }
 
-        public override float CalcularModificadorDePrecio() {
-            float modificador = base.CalcularModificadorDePrecio();
+        public Pantalon(TipoPantalon tipoPantalon) {
+            TipoPantalon = tipoPantalon;
+        }
+
+        public override float CalcularModificadorDePrecio(CalidadPrenda calidad) {
+            float modificador = base.CalcularModificadorDePrecio(calidad);
             if (TipoPantalon == TipoPantalon.CHUPIN) {
                 modificador -= 0.12f;
             }

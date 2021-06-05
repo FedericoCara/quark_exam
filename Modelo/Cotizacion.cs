@@ -15,13 +15,13 @@ namespace Quark_Exam.Modelo
         public int CantidadPrendas { get; private set; }
         public float PrecioCotizado { get; private set; }
 
-        public Cotizacion(int nroIdentificacion, Vendedor vendedor, Prenda prenda, int cantidadPrendas) {
+        public Cotizacion(int nroIdentificacion, Vendedor vendedor, Prenda prenda, CalidadPrenda calidad, float precio, int cantidadPrendas) {
             NroIdentificacion = nroIdentificacion;
             Vendedor = vendedor;
             Prenda = prenda;
             FechaYHora = new DateTime();
             CantidadPrendas = cantidadPrendas;
-            PrecioCotizado = Prenda.CalcularCotizacion(CantidadPrendas);
+            PrecioCotizado = Prenda.CalcularCotizacion(calidad , precio, CantidadPrendas);
         }
 
     }

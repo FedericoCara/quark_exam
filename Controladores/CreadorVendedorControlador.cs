@@ -24,7 +24,11 @@ namespace Quark_Exam.Controladores
             if (CreadorCotizacionForm == null) {
                 CreadorCotizacionForm = new CreadorCotizacionForm();
                 CreadorCotizacionForm.CreadorVendedorControlador = this;
+                CreadorCotizacionForm.CreadorCotizacionControlador.Tienda = Tienda;
             }
+            CreadorCotizacionForm.CreadorCotizacionControlador.AddVendedor(nuevoVendedor);
+            creadorVendedorForm.Hide();
+            CreadorCotizacionForm.CompletarPantalla();
             CreadorCotizacionForm.Show();
         }
     }

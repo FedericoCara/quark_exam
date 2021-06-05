@@ -8,16 +8,14 @@ namespace Quark_Exam.Modelo
 {
     public abstract class Prenda
     {
-        public float Precio { get; set; }
-        public CalidadPrenda Calidad { get; set; }
 
-        public float CalcularCotizacion(int cantidad) {
-            return cantidad * Precio * CalcularModificadorDePrecio();
+        public float CalcularCotizacion(CalidadPrenda calidad, float precio, int cantidad) {
+            return (float)Math.Round(cantidad * precio * CalcularModificadorDePrecio(calidad),2);
         }
 
-        public virtual float CalcularModificadorDePrecio() {
+        public virtual float CalcularModificadorDePrecio(CalidadPrenda calidad) {
             float modificador = 1;
-            if (Calidad == CalidadPrenda.PREMIUM) {
+            if (calidad == CalidadPrenda.PREMIUM) {
                 modificador += 0.3f;
             }
             return modificador;

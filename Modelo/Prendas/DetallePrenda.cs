@@ -10,5 +10,10 @@ namespace Quark_Exam.Modelo
     {
         public int Cantidad { get; set; }
         public Prenda Prenda { get; set; }
+
+        public DetallePrenda(int cantidad, Prenda prenda) {
+            Cantidad = cantidad;
+            Prenda = prenda;
+        }
     }
 }
