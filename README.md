@@ -46,6 +46,7 @@ public interface IVolador{
 
 5. 
 Cuando hay una relación de composición (A -> B, A contiene a B), nos aseguramos que solo A sepa de la existencia de B y se encargue de su creación y de su destrucción, por lo que desde afuera nunca interactuaremos directamente con instancias de B (aunque A se puede encargar de exponer el contenido de B con indirecciones). Además que si destruímos a A, todas las partes B serán destruidas también.
+
 En el caso de la agregación, A está compuesto por las partes B. Pero a diferencia de la composición, en este caso B puede ser creado en otras clases, y posteriormente se puede agregar o quitar de A. Por lo tanto no tienen una dependencia total.
 
 6. A) Verdadero
