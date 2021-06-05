@@ -1,5 +1,5 @@
 ﻿
-namespace Quark_Exam
+namespace Quark_Exam.Vista
 {
     partial class CreadorCotizacionForm
     {
@@ -32,7 +32,7 @@ namespace Quark_Exam
             this.tiendaNombreLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.historialCotizacionesLink = new System.Windows.Forms.LinkLabel();
             this.vendedorCodigoLbl = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.vendedorNombreYApellidoLbl = new System.Windows.Forms.Label();
@@ -119,7 +119,7 @@ namespace Quark_Exam
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.linkLabel1);
+            this.groupBox2.Controls.Add(this.historialCotizacionesLink);
             this.groupBox2.Controls.Add(this.vendedorCodigoLbl);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.vendedorNombreYApellidoLbl);
@@ -131,15 +131,16 @@ namespace Quark_Exam
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Vendedor";
             // 
-            // linkLabel1
+            // historialCotizacionesLink
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(196, 62);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(107, 13);
-            this.linkLabel1.TabIndex = 4;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Historial Cotizaciones";
+            this.historialCotizacionesLink.AutoSize = true;
+            this.historialCotizacionesLink.Location = new System.Drawing.Point(196, 63);
+            this.historialCotizacionesLink.Name = "historialCotizacionesLink";
+            this.historialCotizacionesLink.Size = new System.Drawing.Size(107, 13);
+            this.historialCotizacionesLink.TabIndex = 4;
+            this.historialCotizacionesLink.TabStop = true;
+            this.historialCotizacionesLink.Text = "Historial Cotizaciones";
+            this.historialCotizacionesLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.historialCotizacionesLink_LinkClicked);
             // 
             // vendedorCodigoLbl
             // 
@@ -393,7 +394,7 @@ namespace Quark_Exam
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(137, 402);
+            this.label6.Location = new System.Drawing.Point(172, 402);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(13, 13);
             this.label6.TabIndex = 9;
@@ -401,11 +402,12 @@ namespace Quark_Exam
             // 
             // cotizacionLbl
             // 
-            this.cotizacionLbl.Location = new System.Drawing.Point(153, 402);
+            this.cotizacionLbl.Location = new System.Drawing.Point(189, 402);
             this.cotizacionLbl.Name = "cotizacionLbl";
-            this.cotizacionLbl.Size = new System.Drawing.Size(168, 18);
+            this.cotizacionLbl.Size = new System.Drawing.Size(132, 18);
             this.cotizacionLbl.TabIndex = 10;
             this.cotizacionLbl.Text = "__________________________";
+            this.cotizacionLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // CreadorCotizacionForm
             // 
@@ -451,7 +453,7 @@ namespace Quark_Exam
         private System.Windows.Forms.Label tiendaNombreLbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel historialCotizacionesLink;
         private System.Windows.Forms.Label vendedorCodigoLbl;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label vendedorNombreYApellidoLbl;

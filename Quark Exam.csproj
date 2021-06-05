@@ -46,28 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\ConsultaHistorialCotizacionesControlador.cs" />
     <Compile Include="Controladores\CreadorCotizacionControlador.cs" />
     <Compile Include="Controladores\CreadorTiendaControlador.cs" />
     <Compile Include="Controladores\CreadorVendedorControlador.cs" />
-    <Compile Include="CreadorCotizacionForm.cs">
+    <Compile Include="Vista\ConsultaHistorialCotizacionesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreadorCotizacionForm.Designer.cs">
+    <Compile Include="Vista\ConsultaHistorialCotizacionesForm.Designer.cs">
+      <DependentUpon>ConsultaHistorialCotizacionesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\CreadorCotizacionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\CreadorCotizacionForm.Designer.cs">
       <DependentUpon>CreadorCotizacionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreadorVendedorForm.cs">
+    <Compile Include="Vista\CreadorVendedorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreadorVendedorForm.Designer.cs">
+    <Compile Include="Vista\CreadorVendedorForm.Designer.cs">
       <DependentUpon>CreadorVendedorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Enums\TipoCuello.cs" />
     <Compile Include="Modelo\Prendas\DetallePrenda.cs" />
     <Compile Include="Modelo\Enums\TipoManga.cs" />
-    <Compile Include="CreadorTiendaForm.cs">
+    <Compile Include="Vista\CreadorTiendaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreadorTiendaForm.Designer.cs">
+    <Compile Include="Vista\CreadorTiendaForm.Designer.cs">
       <DependentUpon>CreadorTiendaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Enums\TipoPantalon.cs" />
@@ -81,13 +88,17 @@
     <Compile Include="Modelo\Vendedor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CreadorCotizacionForm.resx">
+    <Compile Include="Vista\DTOs\DTOCotizacionHistorial.cs" />
+    <EmbeddedResource Include="Vista\ConsultaHistorialCotizacionesForm.resx">
+      <DependentUpon>ConsultaHistorialCotizacionesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\CreadorCotizacionForm.resx">
       <DependentUpon>CreadorCotizacionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreadorTiendaForm.resx">
+    <EmbeddedResource Include="Vista\CreadorTiendaForm.resx">
       <DependentUpon>CreadorTiendaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreadorVendedorForm.resx">
+    <EmbeddedResource Include="Vista\CreadorVendedorForm.resx">
       <DependentUpon>CreadorVendedorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

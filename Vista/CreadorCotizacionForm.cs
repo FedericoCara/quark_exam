@@ -9,12 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Quark_Exam
+namespace Quark_Exam.Vista
 {
     public partial class CreadorCotizacionForm : Form
     {
         public CreadorCotizacionControlador CreadorCotizacionControlador { get; private set; }
-        public CreadorVendedorControlador CreadorVendedorControlador { get; set; }
 
         public CreadorCotizacionForm() {
             InitializeComponent();
@@ -84,6 +83,8 @@ namespace Quark_Exam
                 MessageBox.Show("Por favor ingrese un precio válido");
             } else if (!int.TryParse(cantidadTxt.Text, out cantidad)) {
                 MessageBox.Show("Por favor ingrese una cantidad válida");
+            } else if (cantidad <= 0) {
+                MessageBox.Show("Por favor ingrese una cantidad mayor que cero.");
             } else {
                 try {
                     cotizacionLbl.Text = CreadorCotizacionControlador.Cotizar(esStandard, precio, cantidad).ToString();
@@ -91,6 +92,10 @@ namespace Quark_Exam
                     MessageBox.Show(ex.Message, "Error al cotizar");
                 }
             }
+        }
+
+        private void historialCotizacionesLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+            CreadorCotizacionControlador.MostrarHistorial();
         }
 
         private void CreadorCotizacionForm_FormClosed(object sender, FormClosedEventArgs e) {

@@ -1,4 +1,5 @@
 ﻿using Quark_Exam.Modelo;
+using Quark_Exam.Vista;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,9 @@ namespace Quark_Exam.Controladores
 {
     public class CreadorCotizacionControlador
     {
+        public CreadorVendedorControlador CreadorVendedorControlador { get; set; }
+        private ConsultaHistorialCotizacionesForm consultaHistorialForm;
+
         public TiendaRopa Tienda { get; set; }
 
         private List<Vendedor> vendedores = new List<Vendedor>();
@@ -74,6 +78,19 @@ namespace Quark_Exam.Controladores
                 return nuevaCotizacion.PrecioCotizado;
             } else {
                 throw new Exception("No hay suficiente Stock para realizar la cotización");
+            }
+        }
+
+        public void MostrarHistorial() {
+            if (consultaHistorialForm == null || consultaHistorialForm.IsDisposed) {
+                consultaHistorialForm = new ConsultaHistorialCotizacionesForm();
+                consultaHistorialForm.ConsultaHistorialCotizacionesControlador.HistorialVendedor = VendedorSeleccionado.HistorialVendedor;
+                consultaHistorialForm.ActualizarTabla();
+                consultaHistorialForm.Show();
+            } else {
+                consultaHistorialForm.ActualizarTabla();
+                consultaHistorialForm.Focus();
+                consultaHistorialForm.Show();
             }
         }
     }

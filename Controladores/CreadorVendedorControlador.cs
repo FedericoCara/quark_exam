@@ -1,4 +1,5 @@
 ﻿using Quark_Exam.Modelo;
+using Quark_Exam.Vista;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,10 +24,12 @@ namespace Quark_Exam.Controladores
             Vendedor nuevoVendedor = new Vendedor(nombre, apellido, codigo, Tienda);
             if (CreadorCotizacionForm == null) {
                 CreadorCotizacionForm = new CreadorCotizacionForm();
-                CreadorCotizacionForm.CreadorVendedorControlador = this;
+                //En caso de poder crear nuevos vendedores posteriormente, se deja referenciado aquí
+                CreadorCotizacionForm.CreadorCotizacionControlador.CreadorVendedorControlador = this;
                 CreadorCotizacionForm.CreadorCotizacionControlador.Tienda = Tienda;
             }
             CreadorCotizacionForm.CreadorCotizacionControlador.AddVendedor(nuevoVendedor);
+            //Se esconde con el fin de poder luego reutilizar para crear nuevos vendedores (no implementado)
             creadorVendedorForm.Hide();
             CreadorCotizacionForm.CompletarPantalla();
             CreadorCotizacionForm.Show();

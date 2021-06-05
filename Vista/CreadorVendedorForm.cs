@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Quark_Exam
+namespace Quark_Exam.Vista
 {
     public partial class CreadorVendedorForm : Form
     {

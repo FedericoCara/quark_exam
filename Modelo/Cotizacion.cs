@@ -12,6 +12,7 @@ namespace Quark_Exam.Modelo
         public Vendedor Vendedor { get; private set; }
         public Prenda Prenda { get; private set; }
         public DateTime FechaYHora { get; private set; }
+        public CalidadPrenda CalidadPrenda { get; private set; }
         public int CantidadPrendas { get; private set; }
         public float PrecioCotizado { get; private set; }
 
@@ -19,7 +20,8 @@ namespace Quark_Exam.Modelo
             NroIdentificacion = nroIdentificacion;
             Vendedor = vendedor;
             Prenda = prenda;
-            FechaYHora = new DateTime();
+            FechaYHora = DateTime.Now;
+            CalidadPrenda = calidad;
             CantidadPrendas = cantidadPrendas;
             PrecioCotizado = Prenda.CalcularCotizacion(calidad , precio, CantidadPrendas);
         }

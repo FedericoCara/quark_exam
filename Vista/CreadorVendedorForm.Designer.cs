@@ -1,5 +1,5 @@
 ﻿
-namespace Quark_Exam
+namespace Quark_Exam.Vista
 {
     partial class CreadorVendedorForm
     {
